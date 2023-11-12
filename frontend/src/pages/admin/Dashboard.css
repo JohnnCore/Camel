@@ -1,0 +1,64 @@
+/* Dashboard.css */
+.dashboard {
+    display: flex;
+    height: 100vh;
+    background: #f2f2f2;
+}
+
+.sidebar {
+    width: 300px;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+
+}
+
+.sidebar h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar li:hover {
+    color: #55a4f3;
+}
+
+.content {
+    flex: 3;
+    padding: 20px;
+}
+
+.dash-header {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.dash-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.dash-main {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Add more styles for your content here */
+
+/* Media queries for responsive design can be added as needed */
