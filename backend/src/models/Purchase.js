@@ -3,19 +3,19 @@ var db = require('./database');
 
 var Users = require('./User')
 
-var Products = db.define('products', {
+var Purchases = db.define('purchases', {
     id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false,
     },
-    name: {
-        type: Sequelize.STRING,
+    date: {
+        type: Sequelize.DATE,
         allowNull: false, 
     },
-    price: {
-        type: Sequelize.DECIMAL,
+    total: {
+        type: Sequelize.NUMBER,
         allowNull: false, 
     },
     userId: {
@@ -31,6 +31,10 @@ var Products = db.define('products', {
     timestamps: false,
 });
 
-Products.belongsTo(Users);
 
-module.exports = Products;
+Purchases.belongsTo(Users);
+Users.hasMany(Purchases);
+
+
+
+module.exports = Purchases;

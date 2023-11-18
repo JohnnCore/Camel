@@ -10,6 +10,9 @@ import ProductList from './pages/products/ProductList';
 import ProductDetails from './pages/products/ProductDetails';
 
 import Dashboard from './pages/admin/Dashboard';
+import AdminProductsList from './pages/admin/products/AdminProductsList';
+
+import Profile from './pages/profile/Profile';
 
 function App() {
 
@@ -23,7 +26,10 @@ function App() {
       <Route path='/cart' element={<Cart/>}></Route>
       <Route path='/:id' element={<ProductDetails/>}></Route>
 
+      <Route path='/profile' element={<Profile/>}></Route>
+
       <Route path='/dashboard' element={<Dashboard/>}></Route>
+      <Route path='/dashboard/products' element={<AdminProductsList/>}></Route>
 
     </Routes>
     </>

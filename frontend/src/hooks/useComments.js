@@ -24,7 +24,7 @@ const useComments = () => {
 
     const createComment = () => {
         const { mutate, error } = useMutation(
-            "create",
+            "createComment",
             postComment,
         )
         return {

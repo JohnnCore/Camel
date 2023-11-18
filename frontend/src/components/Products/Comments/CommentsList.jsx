@@ -8,7 +8,7 @@ const CommentsList = ({ id }) => {
 
     const { commentsData, commentsError, commentsLoading } = retriveAllProductComments(id);
     const { mutate, error } = createComment();
-    console.log(comment);
+
     if (commentsLoading) {
         return <h1>Loading...</h1>
     }

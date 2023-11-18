@@ -5,6 +5,10 @@ const getCartFromLocalStorage = () => {
   return storedCart ? JSON.parse(storedCart) : [];
 };
 
+const saveCartToLocalStorage = (cart) => {
+  localStorage.setItem('cart', JSON.stringify(cart));
+};
+
 const initCartState = { cart: getCartFromLocalStorage() };
 
 const REDUCER_ACTION_TYPE = {
@@ -13,11 +17,6 @@ const REDUCER_ACTION_TYPE = {
   QUANTITY: "QUANTITY",
   SUBMIT: "SUBMIT",
 };
-
-const saveCartToLocalStorage = (cart) => {
-  localStorage.setItem('cart', JSON.stringify(cart));
-};
-
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -80,6 +79,8 @@ const reducer = (state, action) => {
     }
 
     case REDUCER_ACTION_TYPE.SUBMIT: {
+      localStorage.removeItem("cart");
+
       return {
         ...state,
         cart: [],

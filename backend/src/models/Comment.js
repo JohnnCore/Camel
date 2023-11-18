@@ -37,6 +37,9 @@ var Comments = db.define('comments', {
 });
 
 Comments.belongsTo(Users);
+Users.hasMany(Comments);
+
 Comments.belongsTo(Products);
+Products.hasMany(Comments);
 
 module.exports = Comments;

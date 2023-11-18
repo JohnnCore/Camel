@@ -18,8 +18,8 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="logo"><a href="/">&#128043; Camel</a></div>
       <ul className="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="#">Products</a></li>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/home">Products</a></li>
         <li><a href="#">About</a></li>
         <li className="nav-dropdown">
           <a href="#">Profile</a>
