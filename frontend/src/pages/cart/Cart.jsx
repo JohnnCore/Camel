@@ -1,6 +1,8 @@
 import useCart from "../../hooks/useCart";
 import usePurchases from "../../hooks/usePurchases";
-import CartLineItem from "../../components/Cart/CartLineItem";
+import CartLineItem from "../../components/carts/CartLineItem";
+
+import './Cart.css';
 
 const Cart = () => {
     const { dispatch, REDUCER_ACTIONS, totalItems, totalPrice, cart } = useCart();
@@ -25,7 +27,6 @@ const Cart = () => {
 
     const pageContent =
         <>
-            <h2 className="offscreen">Cart</h2>
             <ul className="cart">
                 {cart.map(item => {
                     return (

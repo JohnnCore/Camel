@@ -7,7 +7,9 @@ db.sync()
 
 /* LIST ---------------------- */
 controllers.list = async (req, res) => {
-    const data = await Users.findAll()
+    const data = await Users.findAll({
+        attributes: { exclude: ['password'] }
+    })
         .then(function (data) {
             return data;
         })

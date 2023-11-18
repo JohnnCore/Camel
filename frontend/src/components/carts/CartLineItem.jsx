@@ -1,4 +1,5 @@
 import { memo } from "react";
+import './CartLineItem.css';
 
 const CartLineItem = ({ item, dispatch, REDUCER_ACTIONS }) => {
 
