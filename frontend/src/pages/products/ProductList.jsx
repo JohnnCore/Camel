@@ -19,7 +19,6 @@ const ProductList = () => {
 
     const pageContent = productsData.map((data) => {
         const inCart = cart.some(item => item.id === data.id)
-        console.log(data);
         return (
             <Product
                 key={data.id}

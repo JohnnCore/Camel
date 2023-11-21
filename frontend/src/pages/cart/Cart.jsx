@@ -18,7 +18,6 @@ const Cart = () => {
             cart: cart,
         }
 
-        console.log(totalPrice);
         mutate({datapost});
         if(!error){
             dispatch({ type: REDUCER_ACTIONS.SUBMIT });

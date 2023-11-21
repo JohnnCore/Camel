@@ -45,7 +45,6 @@ controllers.product_list = async (req, res) => {
 /* GET ---------------------- */
 controllers.get = async (req, res) => {
     const { id } = req.params;
-    console.log(id);
     const data = await Comments.findOne({
         where: { id: id },
         include: [

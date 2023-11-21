@@ -10,10 +10,7 @@ const commentsAPI = () => {
   };
   
   const postComment = async ({ datapost }) => {
-    console.log(datapost);
     const response = await axios.post(`${API_BASE_URL}/comments/create`, datapost);
-    console.log(`${API_BASE_URL}/comments/create`);
-    console.log(response.data);
     return response.data.data;
 }
 

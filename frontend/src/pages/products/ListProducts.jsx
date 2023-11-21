@@ -14,7 +14,6 @@ function ListProducts() {
     if (productsError) {
         return <div>Error: {error.message}</div>;
     }
-    console.log(productsData);
 
     return (
         <div className="product-list">

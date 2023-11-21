@@ -1,6 +1,6 @@
 import React from 'react';
-import TableContent from '../../../components/Dashboard/TableContent';
-import useUsers from '../../../hooks/useUsers';
+import TableContent from '../../../../components/Dashboard/TableContent';
+import useUsers from '../../../../hooks/useUsers';
 
 const AdminListUsers = () => {
     const { retriveAllUsers } = useUsers();

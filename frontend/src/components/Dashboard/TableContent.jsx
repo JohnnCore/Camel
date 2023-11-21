@@ -7,7 +7,7 @@ const TableContent = ({ data, handleEdit }) => {
 
     return (
         <div>
-            <button style={{ float: 'right', marginTop: '10px', marginRight: '10px', }} className="btn btn-info">New</button>
+            {/* <button style={{ float: 'right', marginTop: '10px', marginRight: '10px', }} className="btn btn-info">New</button>
             <table className="table table-hover table-striped">
                 <thead className="thead-dark">
                     <tr>
@@ -42,7 +42,7 @@ const TableContent = ({ data, handleEdit }) => {
                         );
                     })}
                 </tbody>
-            </table>
+            </table> */}
         </div>
     );
 };
