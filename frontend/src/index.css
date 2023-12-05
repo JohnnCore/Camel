@@ -3,6 +3,13 @@
   padding: 0;
 }
 
+body {
+  font-family: 'Arial, sans-serif';
+  margin: 0;
+  padding: 0;
+  background-color: #16222d;
+}
+
 /* .product-list {
   display: flex;
   flex-wrap: wrap;

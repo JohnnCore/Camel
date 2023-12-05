@@ -11,7 +11,14 @@ db.sync()
 
 /* LIST ---------------------- */
 controllers.list = async (req, res) => {
-    const data = await Purchases.findAll()
+    const data = await Purchases.findAll({
+        include: [
+            {
+                model: Users,
+                attributes: { exclude: ['password'] },
+            },
+        ]
+    })
         .then(function (data) {
             return data;
         })
@@ -25,11 +32,12 @@ controllers.list = async (req, res) => {
 controllers.user_list = async (req, res) => {
     const { userId } = req.params;
     const data = await Purchases.findAll({
-        where: {userId:userId},
-        include:[
-            {model: PurchaseProducts,
-                include:[
-                    {model: Products},
+        where: { userId: userId },
+        include: [
+            {
+                model: PurchaseProducts,
+                include: [
+                    { model: Products },
                 ]
             },
         ]
@@ -50,7 +58,15 @@ controllers.get = async (req, res) => {
     const data = await Purchases.findOne({
         where: { id: id },
         include: [
-
+            {
+                model: Users,
+            },
+            {
+                model: PurchaseProducts,
+                include: [
+                    { model: Products },
+                ]
+            },
         ]
     })
         .then(function (data) {

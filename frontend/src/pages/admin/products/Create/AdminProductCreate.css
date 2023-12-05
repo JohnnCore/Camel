@@ -1,9 +1,101 @@
-.form-op{
-    width: 75%;
-    z-index: 0;
-    height: 100%;
+/* src/components/Form.css */
+.AdminProductCreate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #192734, #08111A);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
 }
 
-.btn{
-    margin-top: 10px;
+.AdminProductCreate .form-card {
+    border: 1px solid #294050;
+    width: 400px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    background-color: #16222d;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.AdminProductCreate .form-group {
+    padding: 20px;
+}
+
+.AdminProductCreate label {
+    display: block;
+    margin-bottom: 8px;
+    color: #00b3b3;
+}
+
+.AdminProductCreate input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #294050;
+    border-radius: 5px;
+    background-color: #1f2c39;
+    color: #fff;
+}
+
+.AdminProductCreate button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00b3b3;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.AdminProductCreate button:hover {
+    background-color: #008080;
+}
+
+.AdminProductCreate textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #294050;
+    border-radius: 5px;
+    background-color: #1f2c39;
+    color: #fff;
+    resize: none;
+}
+
+/* Style the file input (you may need to customize it further based on your design preferences) */
+
+.AdminProductCreate .file-input-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #00b3b3;
+    cursor: pointer;
+}
+
+.AdminProductCreate .file-input-container {
+    position: relative;
+    width: 100%;
+}
+
+.AdminProductCreate .file-input-display {
+    display: flex;
+    align-items: center;
+}
+
+.AdminProductCreate .file-input-display img {
+    width: 50px;
+    /* Adjust the size of the displayed image */
+    height: auto;
+    margin-right: 10px;
+}
+
+.AdminProductCreate .file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
 }

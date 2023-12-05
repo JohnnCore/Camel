@@ -3,7 +3,7 @@ import purchasesAPI from '../api/purchasesAPI';
 
 const usePurchases = () => {
     const queryClient = useQueryClient()
-    const { listUserPurchases, postPurchase } = purchasesAPI();
+    const { listUserPurchases, postPurchase, listAllPurchases, getOnePurchase } = purchasesAPI();
 
     const retriveUserPurchases = (id) => {
         const { data: userPurchasesData, error: userPurchasesError, isLoading: userPurchasesLoading } = useQuery(
@@ -20,8 +20,6 @@ const usePurchases = () => {
         }
     };
 
-
-
     const createPurchase = () => {
         const { mutate, error } = useMutation(
             "createPurchase",
@@ -33,9 +31,44 @@ const usePurchases = () => {
         }
     }
 
+    const retriveAllPurchases = () => {
+
+        const { data: purchasesData, error: purchasesError, isLoading: purchasesLoading } = useQuery(
+            "purchases",
+            () => listAllPurchases(),
+            {
+                refetchOnWindowFocus: false,
+            }
+        )
+
+        return {
+            purchasesData,
+            purchasesError,
+            purchasesLoading,
+        }
+    };
+
+    const retriveOnePurchase = (id) => {
+        const { data: purchaseData, error: purchaseError, isLoading: purchaseLoading } = useQuery(
+            "purchase",
+            () => getOnePurchase({id}),
+            {
+                refetchOnWindowFocus: false,
+            }
+        )
+
+        return {
+            purchaseData,
+            purchaseError,
+            purchaseLoading,
+        }
+    };
+
     return {
         retriveUserPurchases,
         createPurchase,
+        retriveAllPurchases,
+        retriveOnePurchase,
     }
 }
 

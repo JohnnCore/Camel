@@ -1,0 +1,64 @@
+/* src/components/DetailsPage.css */
+
+.AdminPurchaseGet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #192734, #08111A);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.AdminPurchaseGet .details-card {
+    border: 1px solid #294050;
+    padding: 30px;
+    width: 400px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    background-color: #16222d;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.AdminPurchaseGet h1,
+.AdminPurchaseGet h2 {
+    color: #00b3b3;
+}
+
+.AdminPurchaseGet ul {
+    list-style: none;
+    padding: 0;
+}
+
+.AdminPurchaseGet li {
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #294050;
+    border-radius: 8px;
+    background-color: #1f2c39;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.AdminPurchaseGet li:hover {
+    background-color: #233142;
+}
+
+.AdminPurchaseGet p {
+    margin: 0;
+}
+
+/* Subtle animations for a futuristic feel */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.AdminPurchaseGet .details-container,
+.AdminPurchaseGet .details-card {
+    animation: fadeIn 1s ease-out;
+}
