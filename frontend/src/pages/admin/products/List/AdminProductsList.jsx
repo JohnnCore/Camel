@@ -1,5 +1,6 @@
 import React from 'react';
 import useProducts from '../../../../hooks/useProducts';
+import './AdminProductsList.css';
 
 const AdminProductsList = () => {
     const { retriveAllProducts, destroyProduct } = useProducts();
@@ -19,44 +20,38 @@ const AdminProductsList = () => {
         mutate({id})
     }
 
+    console.log(productsData);
+
     return (
-        <table className="table table-hover table-striped">
-            <thead className="thead-dark">
-                <tr>
-                    <th scope="col">
-                        ID
-                    </th>
-                    <th scope="col">
-                        NAME
-                    </th>
-                    <th scope="col">
-                        PRICE
-                    </th>
-                    <th scope="col">
-                        USER
-                    </th>
-                    <th scope="col">
-                        ACTIONS
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                {productsData.map((data) => {
-                    return (
-                        <tr key={data.id}>
-                            <th className="align-middle">{data.id}</th>
-                            <td className="align-middle">{data.name}</td>
-                            <td className="align-middle">{data.price}</td>
-                            <td className="align-middle">{data.user.username}</td>
-                            <td className="align-middle">
-                                <a href={`/dashboard/products/${data.id}`} className="btn btn-outline-info" style={{ display: 'block', width:'8vh' }}>VIEW</a>
-                                <a onClick={() => sendDelete(data.id)} className="btn btn-outline-danger" style={{ display: 'block', width:'8vh' }}>DELETE</a>
-                            </td>
+        <div className="AdminProductsList">
+            <a className="new-button" href={`/dashboard/products/create`}>Add New</a>
+            <div className="table-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>PRODUCT</th>
+                            <th>PRICE</th>
+                            <th>USER</th>
+                            <th>ACTIONS</th>
                         </tr>
-                    );
-                })}
-            </tbody>
-        </table>
+                    </thead>
+                    <tbody>
+                        {productsData.map((data) => (
+                            <tr key={data.id}>
+                                <th>{data.id}</th>
+                                <th>{data.name}</th>
+                                <td>{data.price}</td>
+                                <td>{data.username}</td>
+                                <td>
+                                    <a href={`/dashboard/products/${data.id}`}>EDIT</a>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        </div>
     );
 }
 export default AdminProductsList;

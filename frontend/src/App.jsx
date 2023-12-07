@@ -10,7 +10,7 @@ import ProductDetails from './pages/products/ProductDetails';
 
 import Profile from './pages/profile/Profile';
 
-import Dashboard from './pages/admin/Dashboard';
+import Dashboard from './pages/admin/dashboard/Dashboard';
 
 // Products
 import AdminProductsList from './pages/admin/products/List/AdminProductsList';

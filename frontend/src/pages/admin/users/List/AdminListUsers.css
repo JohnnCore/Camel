@@ -1,0 +1,66 @@
+/* src/components/Table.css */
+.AdminListUsers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #192734, #08111A);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.AdminListUsers .table-card {
+    border: 1px solid #294050;
+    width: 80%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    background-color: #16222d;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.AdminListUsers table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.AdminListUsers th,
+.AdminListUsers td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #294050;
+}
+
+.AdminListUsers th {
+    background-color: #1f2c39;
+}
+
+.AdminListUsers tr {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.AdminListUsers tr:hover {
+    background-color: #233142;
+}
+
+.AdminListUsers a {
+    display: block;
+    width: 10%;
+    padding: 10px;
+    margin: 5px 0;
+    text-align: center;
+    text-decoration: none;
+    color: #00b3b3;
+    border: 1px solid #294050;
+    border-radius: 5px;
+    background-color: #1f2c39;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.AdminListUsers a:hover {
+    background-color: #233142;
+}
+
+.AdminListUsers .delete {
+    color: red;
+}

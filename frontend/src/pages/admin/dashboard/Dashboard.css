@@ -1,0 +1,96 @@
+/* src/components/Dashboard.css */
+.Dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1000vh;
+  background: linear-gradient(to right, #192734, #08111A);
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.Dashboard .dashboard-card {
+  position: absolute;
+  border: 1px solid #294050;
+  width: 600px;
+  height: 75%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  background-color: #16222d;
+  border-radius: 10px;
+  overflow: hidden;
+  /* padding: 20px; */
+  /* margin-top: 20px; */
+  left: 2%;
+  top: 12%;
+}
+
+.Dashboard h1 {
+  /* color: #00b3b3; */
+  color: white;
+}
+
+/* Estilo do gráfico */
+.Dashboard .chart-container {
+  margin-top: 20px;
+}
+
+/* Estilo dos filtros */
+.Dashboard .filters-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.Dashboard label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  color: #00b3b3;
+}
+
+.Dashboard select,
+.Dashboard input[type="date"] {
+  padding: 8px;
+  border: 1px solid #294050;
+  border-radius: 5px;
+  background-color: #1f2c39;
+  color: #fff;
+}
+
+.Dashboard .second-card {
+  position: absolute;
+  border: 1px solid #294050;
+  width: 600px;
+  height: 80%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  background-color: #16222d;
+  border-radius: 10px;
+  overflow: hidden;
+  left: 2%;
+  top: 92%;
+}
+
+/* Add a new class for the second graph */
+.Dashboard .second-graph-container {
+  position: relative;
+  top: 60%;
+  left: 15%;
+}
+
+.Dashboard .third-card {
+  position: absolute;
+  border: 1px solid #294050;
+  width: 600px;
+  height: 105%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  background-color: #16222d;
+  border-radius: 10px;
+  overflow: hidden;
+  left: 37%;
+  top: 12%;
+}
+
+/* Add a new class for the second graph */
+.Dashboard .third-graph-container {
+  margin-top: 20px;
+}

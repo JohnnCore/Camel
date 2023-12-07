@@ -12,7 +12,7 @@ const AdminPurchaseGet = () => {
     const { purchaseData, purchaseLoading, purchaseError } = retriveOnePurchase(id);
     console.log(purchaseData);
     if (purchaseLoading) {
-        return <h1>Loading...</h1>
+        return <h1 className="AdminPurchaseGet">Loading...</h1>
     }
 
     if (purchaseError) {
