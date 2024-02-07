@@ -62,7 +62,8 @@ controllers.get = async (req, res) => {
 
 /* CREATE ---------------------- */
 controllers.create = async (req, res) => {
-
+    // const token = req.headers.authorization;
+    // console.log(token);
     const {id, comment} = req.body;
     try {
 

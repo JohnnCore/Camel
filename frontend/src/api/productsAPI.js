@@ -1,11 +1,19 @@
 import axios from 'axios';
+import useAuth from '../hooks/useAuth';
 
 const API_BASE_URL = 'http://localhost:3000/products';
 
 const productsAPI = () => {
-
+  const {token} = useAuth();
+  console.log(token);
   const listAllProducts = async () => {
-    const response = await axios.get(`${API_BASE_URL}`);
+    const response = await axios.get(`${API_BASE_URL}`,
+    {
+      headers:{
+        Authorization:`Bearer ${token}`
+      }
+    });
+    
     return response.data.data;
   };
 

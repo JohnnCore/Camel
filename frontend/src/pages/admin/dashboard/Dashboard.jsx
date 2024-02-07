@@ -72,6 +72,10 @@ const Dashboard = () => {
             <div className='third-card'>
                 passa
             </div>
+
+            <div className='fourth-card'>
+                passa
+            </div>
         </div>
     );
 };

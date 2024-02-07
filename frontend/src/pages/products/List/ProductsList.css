@@ -1,0 +1,68 @@
+/* src/components/ProductList.css */
+
+
+.ProductList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.ProductList .product-card {
+    border: 1px solid #294050;
+    width: 15%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    background-color: #16222d;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    left: 1.5%;
+}
+
+.ProductList .product-card:hover {
+    transform: scale(1.05);
+}
+
+.ProductList .product-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-bottom: 1px solid #294050;
+}
+
+.ProductList .product-name {
+    margin: 10px 0;
+    font-size: 1.6vw; /* Utiliza a unidade vw para tornar a fonte responsiva */
+    color: #fff;
+}
+
+.ProductList .product-price {
+    font-size: 1.4vw; /* Utiliza a unidade vw para tornar a fonte responsiva */
+    color: #00b3b3;
+}
+
+.ProductList .add-to-cart-button {
+    width: 100%;
+    padding: 8px;
+    background-color: #00b3b3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.ProductList .add-to-cart-button:hover {
+    background-color: #008080;
+}
+
+/* Adiciona regras de mídia para ajustar o layout em telas menores */
+@media (max-width: 768px) {
+    .ProductList .product-card {
+        width: 100%;
+        left: 0;
+    }
+}
+

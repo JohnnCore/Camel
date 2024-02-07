@@ -3,12 +3,14 @@ import React from 'react';
 import { Routes, Route } from "react-router-dom";
 
 import HomePage from './pages/main/HomePage';
-import ListProducts from './pages/products/ListProducts';
+import ProductList from './pages/products/List/ProductsList';
 import Cart from './pages/cart/Cart';
-import ProductList from './pages/products/ProductList';
 import ProductDetails from './pages/products/ProductDetails';
 
-import Profile from './pages/profile/Profile';
+
+// Users
+import Profile from './pages/users/Profile';
+import Login from './pages/users/Login';
 
 import Dashboard from './pages/admin/dashboard/Dashboard';
 
@@ -33,11 +35,11 @@ function App() {
     <Routes>
       <Route path='/' element={<HomePage/>}></Route>
       <Route path='/home' element={<ProductList/>}></Route>
-      <Route path='/products/list' element={<ListProducts/>}></Route> {/* to remove */}
       <Route path='/cart' element={<Cart/>}></Route>
       <Route path='/:id' element={<ProductDetails/>}></Route>
 
       <Route path='/profile' element={<Profile/>}></Route>
+      <Route path='/login' element={<Login/>}></Route>
 
       <Route path='/dashboard' element={<Dashboard/>}></Route>
       {/* Products */}
@@ -49,6 +51,7 @@ function App() {
       <Route path='/dashboard/purchases' element={<AdminPurchasesList/>}></Route>
       <Route path='/dashboard/purchases/:id' element={<AdminPurchaseGet/>}></Route>
       
+      {/* Users  */}
       <Route path='/dashboard/users' element={<AdminListUsers/>}></Route>      
     </Routes>
     </>

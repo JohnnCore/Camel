@@ -1,4 +1,4 @@
-import { ReactElement, createContext, useMemo, useReducer } from "react";
+import { createContext, useMemo, useReducer } from "react";
 
 const getCartFromLocalStorage = () => {
   const storedCart = localStorage.getItem('cart');

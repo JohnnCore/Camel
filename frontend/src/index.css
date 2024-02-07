@@ -10,11 +10,11 @@ body {
   background-color: white;
 }
 
-.product-list {
+/* .product-list {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping to the next line */
+  flex-wrap: wrap; 
   gap: 20px;
-  justify-content: flex-start; /* Products start from the left */
+  justify-content: flex-start; 
 }
 
 .product-card {
@@ -61,7 +61,7 @@ body {
 
 .product-card button:hover {
   background-color: #333;
-}
+} */
 
 /*NAVBAR*/
 .navbar {

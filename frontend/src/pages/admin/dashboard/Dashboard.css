@@ -12,7 +12,7 @@
 .Dashboard .dashboard-card {
   position: absolute;
   border: 1px solid #294050;
-  width: 600px;
+  width: 31%;
   height: 75%;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
   background-color: #16222d;
@@ -20,7 +20,7 @@
   overflow: hidden;
   /* padding: 20px; */
   /* margin-top: 20px; */
-  left: 2%;
+  left: 1%;
   top: 12%;
 }
 
@@ -60,13 +60,13 @@
 .Dashboard .second-card {
   position: absolute;
   border: 1px solid #294050;
-  width: 600px;
+  width: 31%;
   height: 80%;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
   background-color: #16222d;
   border-radius: 10px;
   overflow: hidden;
-  left: 2%;
+  left: 1%;
   top: 92%;
 }
 
@@ -80,17 +80,35 @@
 .Dashboard .third-card {
   position: absolute;
   border: 1px solid #294050;
-  width: 600px;
+  width: 31%;
   height: 105%;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
   background-color: #16222d;
   border-radius: 10px;
   overflow: hidden;
-  left: 37%;
+  left: 34%;
   top: 12%;
 }
 
 /* Add a new class for the second graph */
 .Dashboard .third-graph-container {
+  margin-top: 20px;
+}
+
+.Dashboard .fourth-card {
+  position: absolute;
+  border: 1px solid #294050;
+  width: 31%;
+  height: 105%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  background-color: #16222d;
+  border-radius: 10px;
+  overflow: hidden;
+  left: 67%;
+  top: 12%;
+}
+
+/* Add a new class for the second graph */
+.Dashboard .fourth-graph-container {
   margin-top: 20px;
 }

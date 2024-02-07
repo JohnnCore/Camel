@@ -3,7 +3,7 @@ import usersAPI from '../api/usersAPI';
 
 const useUsers = () => {
     const queryClient = useQueryClient()
-    const { listAllUsers  } = usersAPI();
+    const { listAllUsers, loginUser } = usersAPI();
 
     const retriveAllUsers = () => {
 
@@ -22,12 +22,23 @@ const useUsers = () => {
         }
     };
 
-    const usePostData = () => {
-        return useMutation(postDataFunction);
-    };
+    const useLoginUser  = () => {
+        const { data, isSuccess, error, mutateAsync } = useMutation(
+            
+            "login",
+            loginUser,
+        )
+        return {
+            mutateAsync,
+            error,  
+            data,
+            isSuccess,          
+        }
+    }
 
     return {
         retriveAllUsers,
+        useLoginUser,
     }
 
 }

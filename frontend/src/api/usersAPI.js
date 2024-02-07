@@ -8,8 +8,15 @@ const usersAPI = () =>{
     return response.data.data;
   };
   
+
+  const loginUser = async ({ datapost }) => {
+    const response = await axios.post(`${API_BASE_URL}/users/login`, datapost);
+    return response.data.token;  
+  }
+
   return{
     listAllUsers,
+    loginUser,
   }
 
 }
